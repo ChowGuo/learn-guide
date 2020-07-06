@@ -15,7 +15,6 @@ import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CharsetEncoder;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.Map;
 
 /**
  * 1.通道：用于节点与目标节点的连接。在javaNIO中负责缓冲中数据的传输。
@@ -171,13 +170,16 @@ public class TestChannel {
         // 编码
         ByteBuffer byteBuffer = charsetEncoder.encode(charBuffer);
 
+        // 打印编码后的数据 -- 字节数据
         for (int i = 0; i < 8; i++) {
             System.out.println(byteBuffer.get());
         }
 
+        // 读取转换
         byteBuffer.flip();
-
+        // 将字节数据解码为 charBuffer
         CharBuffer charBuffer1 = charsetDecoder.decode(byteBuffer);
+        // 打印获取的解码的数据
         System.out.println(charBuffer1.toString());
     }
 }
