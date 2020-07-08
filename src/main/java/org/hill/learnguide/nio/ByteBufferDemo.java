@@ -85,6 +85,9 @@ public class ByteBufferDemo {
         System.out.println("############################");
     }
 
+    /**
+     * 分配直接缓冲区
+     */
     @Test
     public void testDirectBuffer() {
         ByteBuffer buf = ByteBuffer.allocateDirect(1024);
