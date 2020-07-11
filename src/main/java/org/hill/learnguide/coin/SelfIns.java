@@ -13,7 +13,7 @@ public class SelfIns {
      * 3. 实际先算哪个？看运算符优先级
      * 4. 自增自减都是直接修改变量的值，不经过操作数栈
      * 5. 最后赋值之前，临时结果都是放在操作数栈中的
-     * @param args
+     * @param args 参数
      */
     public static void main(String[] args) {
         int i = 1;
